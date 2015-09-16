@@ -1,0 +1,63 @@
+<section id="contact" class="module">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-sm-6 col-sm-offset-3">
+
+            <h2 class="module-title font-alt">Get in touch</h2>
+
+          </div>
+
+        </div><!-- .row -->
+
+        <div class="row">
+
+          <div class="col-sm-6 col-sm-offset-3">
+
+            
+              <%= form_tag(contact_us_path, method: 'post', multipart: true) do %>
+              <div class="form-group">
+
+              	<%= text_field_tag 'name', nil,  class: 'form-control', placeholder: 'Name*'%>
+                <p class="help-block text-danger"></p>
+              </div>
+
+              <div class="form-group">
+                <%= email_field_tag 'email', nil,  class: 'form-control', placeholder: 'Your Email*'%>
+                <p class="help-block text-danger"></p>
+              </div>
+
+              <div class="form-group">
+              	<%= text_area_tag 'message', nil,  class: 'form-control', placeholder: 'Message*'%>
+                <p class="help-block text-danger"></p>
+              </div>
+
+              <div class="text-center">
+                
+                <%= button_tag(type: 'submit', class: "btn btn-block btn-round btn-d") do %>
+                     Submit
+                	<% end %>
+              </div>
+               <% end %>
+           
+
+            <!-- Ajax response -->
+            
+          </div>
+
+        </div><!-- .row -->
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+    </section>
